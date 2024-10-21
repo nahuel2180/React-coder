@@ -1,25 +1,34 @@
-import React from 'react'
-import { CartWidget } from './CartWidget'
-import './NavBar.css'
+import CartWidget from "./CartWidget"
+import { BsBox } from "react-icons/bs";
+import { Link } from "react-router-dom";
+
+import "./navbar.css"
 
 const NavBar = () => {
 
 
   return (
-    <nav className='navbar'>
-        <h1>NG-Clothes</h1>
+    <nav className="navbar">
 
-        <ul class="nav-items">
-            <li><a href="#remeras">Remeras</a></li>
-            <li><a href="#pantalones">Pantalones</a></li>
-            <li><a href="#buzos">Buzos</a></li>
-        </ul>
+      <ul className="categories">
+        <li className="category">
+          <Link to="/category/remeras" >Remeras</Link>
+        </li>
+        <li className="category">
+          <Link to="/category/pantalones">Pantalones</Link>
+        </li>
+        <li className="category">
+          <Link to="/category/zapatillas">Zapatillas</Link>
+        </li>
+      </ul>
 
-        <CartWidget />
+      <Link to="/" className="brand primary-font-color">
+        <BsBox className="icon-brand" />
+        <p className="title-brand ">NG-Clothes</p>
+      </Link>
 
+      <CartWidget />
     </nav>
-
   )
 }
-
 export default NavBar

@@ -2,7 +2,7 @@ import React from 'react'
 import iconCart from '../../assets/cart.png'
 import './NavBar.css'
 
-export const CartWidget = () => {
+const CartWidget = () => {
 
 
   return (
@@ -11,3 +11,5 @@ export const CartWidget = () => {
     </div>
   )
 }
+
+export default CartWidget
